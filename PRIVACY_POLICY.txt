@@ -1,0 +1,17 @@
+ABES Attendance Tracker — Privacy Policy
+
+Last updated: 5 October 2026
+
+ABES Attendance Tracker is an independent student project developed by Rajnish Kumar and is not an official ABES Engineering College application.
+
+Data access: The extension reads attendance information only from the ABES ERP Attendance page that the user is already signed into.
+
+Credentials: The extension does not collect or store ERP passwords or OTPs. Authentication is performed directly on ABES ERP.
+
+Storage: Synced attendance information is stored locally using Chrome extension storage on the user’s browser so the last synced attendance can be viewed later.
+
+Sharing: The extension does not sell, transmit, or share attendance information with the developer or third parties.
+
+Deletion: Users can use “Clear saved attendance” in the extension or remove the extension to delete locally stored extension data.
+
+Permissions: storage is used for local attendance data; activeTab and scripting are used to read attendance from the active ABES ERP attendance page after the user presses Sync Now; host access is limited to https://erp.abes.ac.in/*.
