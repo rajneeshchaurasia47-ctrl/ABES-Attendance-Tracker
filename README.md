@@ -1,45 +1,75 @@
-ABES Attendance Tracker v4.0.0 (Final)
-Developed by Rajnish Kumar
-B.Tech CSE (Data Science), ABES Engineering College
+# ABES Attendance Tracker
 
-FEATURES
-- Reads attendance from the student's own logged-in ABES ERP Attendance page.
-- Overall Present / Absent / Total summary.
-- Subject-wise attendance percentage.
-- 75% target calculator: classes to attend or classes that can be missed.
-- Date-wise attendance history when available from ERP.
-- Last synced attendance remains available locally in the browser.
-- Multi-student friendly: each installation reads only the currently logged-in student's ERP session.
-- Does NOT store the student's ERP password or OTP.
+A lightweight Chrome/Brave extension for **ABES Engineering College students** to sync and understand attendance from their own logged-in ABES ERP session.
 
-INSTALL
-1. Extract this ZIP to a permanent folder.
-2. Open chrome://extensions in Chrome/Brave.
-3. Enable Developer mode.
-4. Click Load unpacked.
-5. Select this extracted folder (the folder containing manifest.json).
-6. Pin ABES Attendance Tracker from the Extensions menu.
+**Current stable version:** v5.1.0  
+**Developed by:** Rajnish Kumar — B.Tech CSE (Data Science), ABES Engineering College
 
-USE
+## Features
+
+- Syncs attendance from the student's currently logged-in ABES ERP session.
+- Shows the **official ERP overall attendance percentage**.
+- Subject-wise **Present, Absent, Total and attendance %**.
+- 75% target calculator: tells you how many upcoming classes to attend.
+- Shows how many classes can be missed while remaining at or above 75%.
+- Date-wise attendance history.
+- Supports **multiple lectures on the same date** and preserves ERP's lecture count.
+- Saves the latest synced attendance locally for offline viewing.
+- Works separately for each student's own browser/ERP session.
+- Includes a one-click option to clear locally saved attendance.
+
+## Installation
+
+1. Open the **Latest Release**: https://github.com/rajneeshchaurasia47-ctrl/ABES-Attendance-Tracker/releases/latest
+2. Download `ABES-Attendance-Tracker-v5.1.0.zip`.
+3. Extract the ZIP to a permanent folder.
+4. Open `chrome://extensions` in Chrome/Brave.
+5. Turn on **Developer mode**.
+6. Click **Load unpacked**.
+7. Select the extracted folder that directly contains `manifest.json`.
+8. Pin **ABES Attendance Tracker** from the Extensions menu.
+
+## How to use
+
 1. Log in to ABES ERP normally.
-2. Open My Attendance:
-   https://erp.abes.ac.in/ERP/Dashboard/Student/Attendance/Default.aspx
-3. Open the extension and click Sync Now.
-4. The latest attendance will be saved locally and can be viewed from the extension.
-5. If the ERP session expires, log in to ERP again before the next sync.
+2. Open **My Attendance** in ERP.
+3. Open the extension and click **Sync Now**.
+4. Your latest attendance is saved locally and remains viewable until the next sync or until you clear it.
+5. If the ERP session expires, log in to ERP again before syncing.
 
-PRIVACY
-ERP credentials and OTP are not collected or stored by this extension. Attendance data is stored using Chrome local extension storage on the user's own browser.
+## How the 75% calculator works
 
-NOTE
-This is an independent student project and is not an official ABES Engineering College application.
+For each subject, the extension uses the ERP's **Present** and **Total lecture** counts. If attendance is below 75%, it calculates the minimum consecutive classes required to reach 75%. If attendance is already at least 75%, it calculates how many upcoming classes can be missed while staying at or above 75%.
 
-## Free installation
-1. Download the ZIP and extract it.
-2. Open `chrome://extensions` in Chrome.
-3. Turn on **Developer mode**.
-4. Click **Load unpacked**.
-5. Select the extracted folder that directly contains `manifest.json`.
-6. Log in to ABES ERP normally, open the Attendance page, then click **Sync Now** in the extension.
+Date-wise history entries are not treated as lecture totals: one ERP history entry/date may represent multiple lectures.
 
-> Independent student project. Not an official ABES Engineering College application.
+## Privacy & security
+
+- The extension **does not collect or store your ERP password or OTP**.
+- It uses only the student's already authenticated ERP session when **Sync Now** is pressed.
+- Attendance data is stored in Chrome's local extension storage on the user's own browser.
+- No attendance data is intentionally sent to an external server by this project.
+- Use **Clear saved attendance** to remove locally cached attendance.
+
+See [PRIVACY_POLICY.md](PRIVACY_POLICY.md) for more information.
+
+## Compatibility
+
+Designed for the current ABES ERP student attendance page. If ABES changes its ERP page structure or attendance endpoints, a future extension update may be required.
+
+## Release
+
+Download the latest stable build from **Releases**:  
+https://github.com/rajneeshchaurasia47-ctrl/ABES-Attendance-Tracker/releases/latest
+
+## Disclaimer
+
+This is an **independent student project** and is not an official ABES Engineering College application. ABES ERP and related names/services belong to their respective owners.
+
+---
+
+### Developer
+
+**Rajnish Kumar**  
+B.Tech CSE (Data Science)  
+ABES Engineering College
